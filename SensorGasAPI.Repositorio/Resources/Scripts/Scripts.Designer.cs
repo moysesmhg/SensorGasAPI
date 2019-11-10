@@ -379,8 +379,9 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         ///   Looks up a localized string similar to SELECT DISTINCT Imagens.Imagem Imagem
         ///              , Profissional.CodigoProfissional CodigoProfissional
         ///              , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional 
-        ///              , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  EnderecoMobile.AbreviacaoEstadoEndereco) RegistroProfissional 
-        ///              , EspecialidadeProfissional.DescricaoEspecialidadeProfissional EspecialidadeProfiss [rest of string was truncated]&quot;;.
+        ///              , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  Estado.AbreviacaoEstado) RegistroProfissional 
+        ///              , EspecialidadeProfissional.DescricaoEspecialidadeProfissional EspecialidadeProfissional 
+        ///         [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string DetalheProfissional {
             get {
@@ -565,14 +566,15 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to      SELECT (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional
+        ///   Looks up a localized string similar to      SELECT  Imagens.Imagem Imagem
+        ///           , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional
         ///           , Consulta.CodigoConsulta CodigoConsulta
         ///           , Consulta.DataRealizacaoConsulta
         ///        FROM Consulta
         ///  INNER JOIN Profissional ON Consulta.CodigoProfissional = Profissional.CodigoProfissional
         ///  INNER JOIN Usuario ON Profissional.CodigoUsuario = Usuario.CodigoUsuario
         ///  INNER JOIN Pessoa ON Usuario.CodigoPessoa = Pessoa.CodigoPessoa
-        ///   LEFT JOIN Avaliacao ON Avaliacao.CodigoConsulta = Consulta.Co [rest of string was truncated]&quot;;.
+        ///   LEFT JOIN Imagens ON Usu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ListaAvaliacoesPaciente {
             get {
@@ -581,14 +583,12 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to      SELECT (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional
-        ///           , Consulta.CodigoConsulta CodigoConsulta
-        ///           , Consulta.DataRealizacaoConsulta
+        ///   Looks up a localized string similar to      SELECT  Consulta.CodigoConsulta CodigoConsulta
         ///        FROM Consulta
-        ///  INNER JOIN Profissional ON Consulta.CodigoProfissional = Profissional.CodigoProfissional
-        ///  INNER JOIN Usuario ON Profissional.CodigoUsuario = Usuario.CodigoUsuario
-        ///  INNER JOIN Pessoa ON Usuario.CodigoPessoa = Pessoa.CodigoPessoa
-        ///   LEFT JOIN Avaliacao ON Avaliacao.CodigoConsulta = Consulta.Co [rest of string was truncated]&quot;;.
+        ///       WHERE 1 = 1
+        ///         AND Consulta.SituacaoConsulta = 4 /* 4 - Consulta Realizada */
+        ///         AND Consulta.CodigoPaciente = @CodigoPaciente
+        ///         AND Consulta.CodigoProfissional = @CodigoProfissional.
         /// </summary>
         internal static string ListaConsultasCargaAvaliacao {
             get {
@@ -659,15 +659,15 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to      SELECT (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomePaciente
+        ///   Looks up a localized string similar to      SELECT  Imagens.Imagem Imagem
+        ///           , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomePaciente
         ///           , Consulta.CodigoConsulta CodigoConsulta
         ///           , Consulta.DataRealizacaoConsulta
         ///           , Avaliacao.NotaAvaliacao NotaAvaliacao
         ///        FROM Consulta
         ///  INNER JOIN Paciente ON Consulta.CodigoPaciente = Paciente.CodigoPaciente
         ///  INNER JOIN Usuario ON Paciente.CodigoUsuario = Usuario.CodigoUsuario
-        ///  INNER JOIN Pessoa ON Usuario.CodigoPessoa = Pessoa.CodigoPessoa
-        ///   LEFT JOIN Avaliacao ON Avaliacao. [rest of string was truncated]&quot;;.
+        ///  INNER JOIN Pessoa ON Usuario.CodigoPessoa = Pessoa.CodigoPessoa        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ListaReputacao {
             get {
@@ -679,8 +679,9 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         ///   Looks up a localized string similar to  SELECT DISTINCT Imagens.Imagem Imagem
         ///               , Profissional.CodigoProfissional CodigoProfissional
         ///               , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional 
-        ///               , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  EnderecoMobile.AbreviacaoEstadoEndereco) RegistroProfissional 
-        ///               , EspecialidadeProfissional.DescricaoEspecialidadeProfissional EspecialidadePr [rest of string was truncated]&quot;;.
+        ///               , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  Estado.AbreviacaoEstado) RegistroProfissional 
+        ///               , EspecialidadeProfissional.DescricaoEspecialidadeProfissional EspecialidadeProfissional 
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ListarProfissionais {
             get {
@@ -690,10 +691,11 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         
         /// <summary>
         ///   Looks up a localized string similar to  SELECT DISTINCT Imagens.Imagem Imagem
-        ///               , Profissional.CodigoProfissional
-        ///               , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) AS NomeProfissional 
-        ///               , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  EnderecoMobile.AbreviacaoEstadoEndereco) AS RegistroProfissional 
-        ///               , EspecialidadeProfissional.DescricaoEspecialidadeProfissional AS EspecialidadeProfissional [rest of string was truncated]&quot;;.
+        ///               , Profissional.CodigoProfissional CodigoProfissional
+        ///               , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional 
+        ///               , (ClasseProfissional.ConselhoProfissional || &apos; &apos; || CAST(RelacaoProfissionalClasse.NumeroRegistroProfissional AS VARCHAR) || &apos;-&apos; ||  Estado.AbreviacaoEstado) RegistroProfissional 
+        ///               , EspecialidadeProfissional.DescricaoEspecialidadeProfissional EspecialidadeProfissional 
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ListarTodosProfissionais {
             get {
@@ -736,14 +738,14 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  INSERT INTO EnderecoMobile
+        ///   Looks up a localized string similar to  INSERT INTO Endereco
         ///           ( CodigoPessoa
         ///           , LogradouroEndereco
         ///           , NumeroEndereco
         ///           , ComplementoEndereco
         ///           , BairroEndereco
-        ///           , MunicipioEndereco
-        ///           , AbreviacaoEstadoEndereco
+        ///           , CodigoMunicipio
+        ///           , CodigoEstado
         ///           , CepEndereco
         ///           , TipoEndereco )
         ///      VALUES
@@ -751,7 +753,8 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         ///           , @LogradouroEndereco
         ///           , @NumeroEndereco
         ///           , @ComplementoEndereco
-        ///           , @B [rest of string was truncated]&quot;;.
+        ///           , @BairroEndereco
+        ///      [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ProfissionalInsertEndereco {
             get {
