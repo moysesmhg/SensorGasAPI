@@ -157,6 +157,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\WebService\WebServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -247,6 +248,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SensorGasAPI.IOC\SensorGasAPI.IOC.csproj">
+      <Project>{10522b39-0c74-4197-bf51-954d1701c17f}</Project>
+      <Name>SensorGasAPI.IOC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SensorGasAPI.Negocio\SensorGasAPI.Negocio.csproj">
+      <Project>{5b811350-2160-465b-8a9e-d0bdfcfc211f}</Project>
+      <Name>SensorGasAPI.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilitarios\Utilitarios.csproj">
+      <Project>{b10bb75f-f5fa-4c8f-95f2-4366992884a9}</Project>
+      <Name>Utilitarios</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -7,28 +7,18 @@ using SensorGasAPI.Negocio;
 
 namespace SensorGasAPI.Negocio
 {
-    public interface IAvaliacaoRepositorio
+    public interface IRegistroEmissaoRepositorio
     {
         #region Tela de Avaliação do Paciente
 
-        Task<IEnumerable<ListaAvaliacoesPacienteProjecao>> ListaAvaliacoesPaciente(long aCodigoPaciente);
-        Task<AvaliacaoPacienteProjecao> RecuperarDetalheAvaliacao(long aCodigoConsulta);
-        Task SalvarAvaliacao(AvaliacaoDados aAvaliacaoPaciente);
+        Task<IEnumerable<RegistroEmissao>> ListaRegistroEmissao(int aIdRegistroEmissao);
+        Task<IEnumerable<RegistroEmissao>> ListaRegistroEmissao(DateTime aDataInicio, DateTime aDataFim);
+        Task<RegistroEmissao> RecuperarRegistroEmissao(int aIdRegistroEmissao);
+        Task SalvarRegistroEmissao(RegistroEmissao aAvaliacaoPaciente);
+        Task SalvarRegistroEmissao(int aIdIndicadorEmissao);
 
         #endregion
 
-
-        #region Tela de Reputação do Profissional
-
-        Task<IEnumerable<ListaReputacaoProjecao>> ListaReputacao(long aCodigoProfissional);
-        Task<ReputacaoProjecao> RecuperarDetalheReputacao(long aCodigoConsulta);
-
-        #endregion
-
-        #region Tela de Detalhe do Profissional
-
-        Task<NumerosProfissionalProjecao> RecuperarNumerosProfissional(long aCodigoProfissional);
-
-        #endregion
     }
+
 }

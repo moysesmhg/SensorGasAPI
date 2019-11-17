@@ -74,112 +74,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\AvaliacaoService.cs" />
-    <Compile Include="Concrete\CadastroProfissionalService.cs" />
-    <Compile Include="Concrete\CadastroUsuarioService.cs" />
-    <Compile Include="Concrete\EmailService.cs" />
-    <Compile Include="Concrete\ConsultaService.cs" />
-    <Compile Include="Concrete\ConfiguracaoService.cs" />
-    <Compile Include="Concrete\EspecialidadeProfissionalService.cs" />
-    <Compile Include="Concrete\ProfissionaisService.cs" />
-    <Compile Include="Concrete\PacienteService.cs" />
-    <Compile Include="Concrete\UsuarioGlobalService.cs" />
-    <Compile Include="Concrete\UsuarioService.cs" />
-    <Compile Include="Concrete\ClasseProfissionalService.cs" />
-    <Compile Include="Enumerador\ClasseProfissionalEnumerador.cs" />
-    <Compile Include="Enumerador\SexoEnumerador.cs" />
-    <Compile Include="Enumerador\SituacaoConsultaEnumerador.cs" />
-    <Compile Include="Enumerador\TempoConsultaEnumerador.cs" />
-    <Compile Include="Enumerador\TipoEnderecoEnumerador.cs" />
-    <Compile Include="Enumerador\TipoPagamentoEnumerador.cs" />
-    <Compile Include="Enumerador\TipoPessoaEnumerador.cs" />
-    <Compile Include="Enumerador\TipoUsuarioEnumerador.cs" />
+    <Compile Include="Concrete\RegistroEmissaoService.cs" />
     <Compile Include="Interfaces\Repositorio\IAvaliacaoRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IConsultaRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IConfiguracaoRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IEmailRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IEspecialidadeProfissionalRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IPacienteRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IProfissionaisRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\ICadastroUsuarioRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\ICadastroProfissionalRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IUsuarioGlobalRepositorio.cs" />
-    <Compile Include="Interfaces\Repositorio\IUsuarioRepositorio.cs" />
     <Compile Include="Interfaces\Service\IAvaliacaoService.cs" />
-    <Compile Include="Interfaces\Service\ICadastroProfissionalService.cs" />
-    <Compile Include="Interfaces\Service\ICadastroUsuarioService.cs" />
-    <Compile Include="Interfaces\Service\IConfiguracaoService.cs" />
-    <Compile Include="Interfaces\Service\IEmailService.cs" />
-    <Compile Include="Interfaces\Service\IConsultaService.cs" />
-    <Compile Include="Interfaces\Service\IEspecialidadeProfissionalService.cs" />
-    <Compile Include="Interfaces\Service\IPacienteService.cs" />
-    <Compile Include="Interfaces\Service\IProfissionaisService.cs" />
-    <Compile Include="Interfaces\Service\IUsuarioGlobalService.cs" />
-    <Compile Include="Interfaces\Service\IUsuarioService.cs" />
-    <Compile Include="Interfaces\Service\IClasseProfissionalService .cs" />
-    <Compile Include="Interfaces\Repositorio\IClasseProfissionalRepositorio.cs" />
-    <Compile Include="Models\Banco\AgendaDados.cs" />
-    <Compile Include="Models\Banco\AvaliacaoDados.cs" />
-    <Compile Include="Models\Banco\CheckEmailDados.cs" />
-    <Compile Include="Models\Banco\ClasseProfissionalDados.cs" />
-    <Compile Include="Models\Banco\ConfiguracaoConsultaDados.cs" />
-    <Compile Include="Models\Banco\ConfiguracaoHorarioDados.cs" />
-    <Compile Include="Models\Banco\ConsultaDados.cs" />
-    <Compile Include="Models\Banco\DadosAdicionaisDados.cs" />
-    <Compile Include="Models\Banco\DiaConsultaDados.cs" />
-    <Compile Include="Models\Banco\EnderecoDados.cs" />
-    <Compile Include="Models\Banco\EnderecoMobileDados.cs" />
-    <Compile Include="Models\Banco\EspecialidadeDados.cs" />
-    <Compile Include="Models\Banco\EstadoDados.cs" />
-    <Compile Include="Models\Banco\HorariosConsultaDados.cs" />
-    <Compile Include="Models\Banco\MunicipioDados.cs" />
-    <Compile Include="Models\Banco\PacienteDados.cs" />
-    <Compile Include="Models\Banco\PessoaDados.cs" />
-    <Compile Include="Models\Banco\ProfissionalDados.cs" />
-    <Compile Include="Models\Banco\ProntuarioDados.cs" />
-    <Compile Include="Models\Banco\RelacaoClasseEspecialidadeDados.cs" />
-    <Compile Include="Models\Banco\RelacaoProfissionalClasseDados.cs" />
-    <Compile Include="Models\Banco\TratamentoDados.cs" />
+    <Compile Include="Models\Banco\RegistroEmissao.cs" />
     <Compile Include="Models\Banco\UsuarioDados.cs" />
-    <Compile Include="Models\Banco\ImagensDados.cs" />
     <Compile Include="Models\Banco\UsuarioGlobalDados.cs" />
-    <Compile Include="Models\Negocio\CadastroProfissionalModelDados.cs" />
-    <Compile Include="Models\Negocio\CadastroUsuarioModelDados.cs" />
-    <Compile Include="Models\Negocio\DetalheProfissionalModelDados.cs" />
-    <Compile Include="Models\Negocio\ListaProfissionaisModelDados.cs" />
-    <Compile Include="Models\Negocio\LoginModelDados.cs" />
-    <Compile Include="Models\Projecao\AgendaConsultaProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\AgendaConsultaProjecao.cs" />
     <Compile Include="Models\Projecao\AvaliacaoPacienteProjecao.cs" />
     <Compile Include="Models\Projecao\BaseProjecao.cs" />
-    <Compile Include="Models\Projecao\CadastroProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\CadastroUsuarioProjecao.cs" />
-    <Compile Include="Models\Projecao\ListaGerenciarConsultasProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheGerenciarConsultasProjecao.cs" />
-    <Compile Include="Models\Projecao\CheckLoginProjecao.cs" />
-    <Compile Include="Models\Projecao\ClasseProfissionaisProjecao.cs" />
-    <Compile Include="Models\Projecao\ConfiguracaoConsultaProjecao.cs" />
-    <Compile Include="Models\Projecao\ConfiguracaoHorarioProjecao.cs" />
-    <Compile Include="Models\Projecao\ConsultaServicoEmailProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheConfiguracaoHorarioProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheConsultaProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheConsultaProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\EspecialidadeProfissionaisProjecao.cs" />
     <Compile Include="Models\Projecao\ListaAvaliacoesPacienteProjecao.cs" />
-    <Compile Include="Models\Projecao\ListaMinhasConsultasProjecao.cs" />
-    <Compile Include="Models\Projecao\ListaProfissionaisProjecao.cs" />
-    <Compile Include="Models\Projecao\ListaReputacaoProjecao.cs" />
-    <Compile Include="Models\Projecao\LoginProjecao.cs" />
-    <Compile Include="Models\Projecao\MasterPageProjecao.cs" />
-    <Compile Include="Models\Projecao\MinhasConsultasProjecao.cs" />
-    <Compile Include="Models\Projecao\DetalheTratamentoProjecao.cs" />
-    <Compile Include="Models\Projecao\NumerosProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\PacienteProjecao.cs" />
-    <Compile Include="Models\Projecao\ProfissionalProjecao.cs" />
-    <Compile Include="Models\Projecao\ReputacaoProjecao.cs" />
-    <Compile Include="Models\Projecao\ListaTratamentoProjecao.cs" />
-    <Compile Include="Models\Projecao\StatusDatasProjecao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,7 +90,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Enumerador\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.5\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
