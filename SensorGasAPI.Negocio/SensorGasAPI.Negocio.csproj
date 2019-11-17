@@ -78,8 +78,6 @@
     <Compile Include="Interfaces\Repositorio\IAvaliacaoRepositorio.cs" />
     <Compile Include="Interfaces\Service\IAvaliacaoService.cs" />
     <Compile Include="Models\Banco\RegistroEmissao.cs" />
-    <Compile Include="Models\Banco\UsuarioDados.cs" />
-    <Compile Include="Models\Banco\UsuarioGlobalDados.cs" />
     <Compile Include="Models\Projecao\AvaliacaoPacienteProjecao.cs" />
     <Compile Include="Models\Projecao\BaseProjecao.cs" />
     <Compile Include="Models\Projecao\ListaAvaliacoesPacienteProjecao.cs" />
