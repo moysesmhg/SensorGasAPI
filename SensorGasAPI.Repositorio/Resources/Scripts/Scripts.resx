@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DetalheAvaliacaoPaciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>registroemissao\detalheavaliacaopaciente.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="ListaRegistroEmissao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>registroemissao\listaregistroemissao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="ListaAvaliacoesPaciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>registroemissao\listaavaliacoespaciente.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="RecuperarRegistroEmissao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>registroemissao\recuperarregistroemissao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="SalvarAvaliacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>registroemissao\salvaravaliacao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="SalvarRegistroEmissao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>registroemissao\salvarregistroemissao.sql;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
 </root>

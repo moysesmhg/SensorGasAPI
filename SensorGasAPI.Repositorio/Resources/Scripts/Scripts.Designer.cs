@@ -61,54 +61,41 @@ namespace SensorGasAPI.Repositorio.Resources.Scripts {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to        SELECT Consulta.CodigoConsulta CodigoConsulta
-        ///           ,  Consulta.DataRealizacaoConsulta
-        ///           , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional
-        ///           ,  Avaliacao.CodigoAvaliacao CodigoAvaliacao
-        ///           ,  Avaliacao.SituacaoAvaliacao
-        ///           ,  Avaliacao.NotaAvaliacao
-        ///           ,  Avaliacao.DescricaoAvaliacao
-        ///         FROM Consulta
-        ///   INNER JOIN Profissional ON Consulta.CodigoProfissional = Profissional.CodigoProfissional
-        ///   INNER JOIN Usuar [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to      SELECT  *
+        ///        FROM RegistroEmissao
+        ///       WHERE 1 = 1
+        ///         AND (IdRegistroEmissao = @IdRegistroEmissao OR @IdRegistroEmissao IS NULL)
+        ///         AND ( (DataRegistroEmissao BETWEEN @DataInicio AND @DataFim) OR
+        ///               (@DataInicio IS NULL AND @DataFim IS NULL) ).
         /// </summary>
-        internal static string DetalheAvaliacaoPaciente {
+        internal static string ListaRegistroEmissao {
             get {
-                return ResourceManager.GetString("DetalheAvaliacaoPaciente", resourceCulture);
+                return ResourceManager.GetString("ListaRegistroEmissao", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to      SELECT  Imagens.Imagem Imagem
-        ///           , (Pessoa.PrimeiroNomePessoa || &apos; &apos; || Pessoa.SobreNomePessoa) NomeProfissional
-        ///           , Consulta.CodigoConsulta CodigoConsulta
-        ///           , Consulta.DataRealizacaoConsulta
-        ///        FROM Consulta
-        ///  INNER JOIN Profissional ON Consulta.CodigoProfissional = Profissional.CodigoProfissional
-        ///  INNER JOIN Usuario ON Profissional.CodigoUsuario = Usuario.CodigoUsuario
-        ///  INNER JOIN Pessoa ON Usuario.CodigoPessoa = Pessoa.CodigoPessoa
-        ///   LEFT JOIN Imagens ON Usu [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to      SELECT  *
+        ///        FROM RegistroEmissao
+        ///       WHERE 1 = 1
+        ///         AND (IdRegistroEmissao = @IdRegistroEmissao OR @IdRegistroEmissao IS NULL).
         /// </summary>
-        internal static string ListaAvaliacoesPaciente {
+        internal static string RecuperarRegistroEmissao {
             get {
-                return ResourceManager.GetString("ListaAvaliacoesPaciente", resourceCulture);
+                return ResourceManager.GetString("RecuperarRegistroEmissao", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  INSERT INTO Avaliacao
-        ///           ( CodigoConsulta
-        ///           , SituacaoAvaliacao
-        ///           , NotaAvaliacao
-        ///           , DescricaoAvaliacao )
-        ///    VALUES ( @CodigoConsulta
-        ///           , @SituacaoAvaliacao
-        ///           , @NotaAvaliacao
-        ///           , @DescricaoAvaliacao ).
+        ///   Looks up a localized string similar to  INSERT INTO RegistroEmissao
+        ///           ( DataRegistroEmissao
+        ///           , IndicadorEmissao )
+        ///    VALUES ( @DataRegistroEmissao
+        ///           , @IndicadorEmissao ).
         /// </summary>
-        internal static string SalvarAvaliacao {
+        internal static string SalvarRegistroEmissao {
             get {
-                return ResourceManager.GetString("SalvarAvaliacao", resourceCulture);
+                return ResourceManager.GetString("SalvarRegistroEmissao", resourceCulture);
             }
         }
     }

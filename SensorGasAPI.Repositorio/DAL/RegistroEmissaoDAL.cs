@@ -28,7 +28,7 @@ namespace SensorGasAPI.Repositorio
             //listaParametros.Add("@HoraAtual", DateTime.Now.Hour.ToString().PadLeft(2, '0') + ":" + DateTime.Now.Minute.ToString().PadLeft(2, '0'));
 
             // Recupera lista da entidade "RegistroEmissao"
-            sqlString = Scripts.ListaAvaliacoesPaciente.ToString();
+            sqlString = Scripts.ListaRegistroEmissao.ToString();
             sqlQuery = RecuperarSQL(sqlString.ToString(), listaParametros);
             var retornoListaRegistroEmissao = this.Conexao.Query<RegistroEmissao>(sqlQuery);
 
@@ -49,7 +49,7 @@ namespace SensorGasAPI.Repositorio
             //listaParametros.Add("@HoraAtual", DateTime.Now.Hour.ToString().PadLeft(2, '0') + ":" + DateTime.Now.Minute.ToString().PadLeft(2, '0'));
 
             // Recupera lista da entidade "RegistroEmissao"
-            sqlString = Scripts.ListaAvaliacoesPaciente.ToString();
+            sqlString = Scripts.ListaRegistroEmissao.ToString();
             sqlQuery = RecuperarSQL(sqlString.ToString(), listaParametros);
             var retornoListaAvaliacoesPaciente = this.Conexao.Query<RegistroEmissao>(sqlQuery);
 
@@ -67,7 +67,7 @@ namespace SensorGasAPI.Repositorio
             listaParametros.Add("@RegistroEmissao", aIdRegistroEmissao);
 
             // Recupera os dados da entidade "RegistroEmissao"
-            sqlString = Scripts.DetalheAvaliacaoPaciente.ToString();
+            sqlString = Scripts.RecuperarRegistroEmissao.ToString();
             sqlQuery = RecuperarSQL(sqlString.ToString(), listaParametros);
             var retornoRegistroEmissao = this.Conexao.FindWithQuery<RegistroEmissao>(sqlQuery);
 
@@ -87,7 +87,7 @@ namespace SensorGasAPI.Repositorio
             listaParametros.Add("@IndicadorEmissao", aRegistroEmissao.IndicadorEmissao);
 
             // Realiza insert na entidade "RegistroEmissao"
-            sqlString = Scripts.SalvarAvaliacao.ToString();
+            sqlString = Scripts.SalvarRegistroEmissao.ToString();
             sqlQuery = RecuperarSQL(sqlString.ToString(), listaParametros);
             registro = this.Conexao.Execute(sqlQuery);
 
@@ -105,7 +105,7 @@ namespace SensorGasAPI.Repositorio
             listaParametros.Add("@IndicadorEmissao", aIndicadorEmissao);
 
             // Realiza insert na entidade "RegistroEmissao"
-            sqlString = Scripts.SalvarAvaliacao.ToString();
+            sqlString = Scripts.SalvarRegistroEmissao.ToString();
             sqlQuery = RecuperarSQL(sqlString.ToString(), listaParametros);
             registro = this.Conexao.Execute(sqlQuery);
 
