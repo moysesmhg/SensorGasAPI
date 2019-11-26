@@ -127,20 +127,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Carga\CicloCarga.cs" />
-    <Compile Include="Old\ConexaoTeste.cs" />
-    <Compile Include="Old\EMailTeste.cs" />
-    <Compile Include="Old\CadastroProfissionalTeste.cs" />
-    <Compile Include="Old\ProfissionalTeste.cs" />
-    <Compile Include="Old\EspecialidadeProfissionalTeste.cs" />
-    <Compile Include="Old\UsuarioTestes.cs" />
-    <Compile Include="Old\CadastroUsuarioTeste.cs" />
-    <Compile Include="Old\ClasseProfissionalTeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Old\HomeControllerTest.cs" />
-    <Compile Include="Old\ValuesControllerTest.cs" />
-    <Compile Include="Service\AppParametros.cs" />
-    <Compile Include="Service\Conexao.cs" />
-    <Compile Include="Service\TesteService.cs" />
     <Compile Include="Utilitarios\TesteUtilitarios.cs" />
   </ItemGroup>
   <ItemGroup>

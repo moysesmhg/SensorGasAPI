@@ -3,18 +3,18 @@
 
 namespace SensorGasAPI.Negocio
 {
-    public class ListaAvaliacoesPacienteProjecao : ProjecaoBase
+    public class ListaRegistroEmissaoProjecao : BaseProjecao
     {
 
         #region Construtores
 
-        public ListaAvaliacoesPacienteProjecao() { }
+        public ListaRegistroEmissaoProjecao() { }
 
         #endregion
 
         #region Atributos
 
-        private byte[] _imagem;
+        private string _image;
         private string _nomeProfissional;
         private long _codigoConsulta;
         private string _dataRealizacaoConsulta;
@@ -23,10 +23,10 @@ namespace SensorGasAPI.Negocio
 
         #region Propriedades
 
-        public byte[] Imagem
+        public string Image
         {
-            get { return _imagem; }
-            set { _imagem = value; OnPropertyChanged(); }
+            get { return _image; }
+            set { _image = value; OnPropertyChanged(); }
         }
 
         public string NomeProfissional

@@ -224,22 +224,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Negocio\EnderecoController.cs" />
-    <Compile Include="Controllers\Negocio\TratamentoController.cs" />
-    <Compile Include="Controllers\Negocio\ImagemController.cs" />
-    <Compile Include="Controllers\Negocio\AvaliacaoController.cs" />
-    <Compile Include="Controllers\Negocio\CadastroProfissionalController.cs" />
-    <Compile Include="Controllers\Negocio\CadastroUsuarioController.cs" />
-    <Compile Include="Controllers\Negocio\PacienteController.cs" />
-    <Compile Include="Controllers\Negocio\EMailController.cs" />
-    <Compile Include="Controllers\Negocio\ConsultaController.cs" />
-    <Compile Include="Controllers\Negocio\ConfiguracaoController.cs" />
-    <Compile Include="Controllers\Negocio\UsuarioGlobalController.cs" />
-    <Compile Include="Controllers\Negocio\ProfissionaisController.cs" />
-    <Compile Include="Controllers\Negocio\EspecialidadeProfissionalController.cs" />
-    <Compile Include="Controllers\Negocio\UsuarioController.cs" />
-    <Compile Include="Controllers\Negocio\ClasseProfissionalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\WebService\WebServiceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
