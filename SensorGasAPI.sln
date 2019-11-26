@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI", "SensorGasAPI\SensorGasAPI.csproj", "{28B4CCBE-FEEE-47E9-926C-593A02DFA68C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI.Tests", "SensorGasAPI.Tests\SensorGasAPI.Tests.csproj", "{29C18368-910D-449A-A589-04F5DB2BA5F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI", "SensorGasAPI\SensorGasAPI.csproj", "{F138CAE3-A687-4198-AD9E-58C75AC8C060}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI.IOC", "SensorGasAPI.IOC\SensorGasAPI.IOC.csproj", "{10522B39-0C74-4197-BF51-954D1701C17F}"
 EndProject
@@ -13,7 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI.Negocio", "Sen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI.Repositorio", "SensorGasAPI.Repositorio\SensorGasAPI.Repositorio.csproj", "{9A844D58-00C1-4C68-ACC9-1B8BFF5C5A2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorGasAPI.Testes", "SensorGasAPI.Testes\SensorGasAPI.Testes.csproj", "{EEA04674-80FA-411E-8891-D7E5380E5ED1}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios", "Utilitarios\Utilitarios.csproj", "{B10BB75F-F5FA-4C8F-95F2-4366992884A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4F1D166-498D-4663-AAB6-13FD3A668ED0}"
+	ProjectSection(SolutionItems) = preProject
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +26,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{28B4CCBE-FEEE-47E9-926C-593A02DFA68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28B4CCBE-FEEE-47E9-926C-593A02DFA68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28B4CCBE-FEEE-47E9-926C-593A02DFA68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28B4CCBE-FEEE-47E9-926C-593A02DFA68C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29C18368-910D-449A-A589-04F5DB2BA5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29C18368-910D-449A-A589-04F5DB2BA5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29C18368-910D-449A-A589-04F5DB2BA5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29C18368-910D-449A-A589-04F5DB2BA5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F138CAE3-A687-4198-AD9E-58C75AC8C060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F138CAE3-A687-4198-AD9E-58C75AC8C060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F138CAE3-A687-4198-AD9E-58C75AC8C060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F138CAE3-A687-4198-AD9E-58C75AC8C060}.Release|Any CPU.Build.0 = Release|Any CPU
 		{10522B39-0C74-4197-BF51-954D1701C17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{10522B39-0C74-4197-BF51-954D1701C17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10522B39-0C74-4197-BF51-954D1701C17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +42,10 @@ Global
 		{9A844D58-00C1-4C68-ACC9-1B8BFF5C5A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A844D58-00C1-4C68-ACC9-1B8BFF5C5A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A844D58-00C1-4C68-ACC9-1B8BFF5C5A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA04674-80FA-411E-8891-D7E5380E5ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA04674-80FA-411E-8891-D7E5380E5ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA04674-80FA-411E-8891-D7E5380E5ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA04674-80FA-411E-8891-D7E5380E5ED1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B10BB75F-F5FA-4C8F-95F2-4366992884A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B10BB75F-F5FA-4C8F-95F2-4366992884A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10BB75F-F5FA-4C8F-95F2-4366992884A9}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -45,7 +45,7 @@ namespace SensorGasAPI.Repositorio
 
             foreach (var p in aParametros)
             {
-                if (new object[] { DBNull.Value, null }.Contains(p.Value))
+                if (new object[] { null }.Contains(p.Value))
                     query = query.Replace(p.Key, "NULL");
                 else if (p.Value.GetType() == typeof(string) && p.Value.ToString() != "NULL")
                     query = query.Replace(p.Key, "'" + p.Value.ToString() + "'");

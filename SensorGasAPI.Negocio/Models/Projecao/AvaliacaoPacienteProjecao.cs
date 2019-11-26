@@ -3,12 +3,12 @@
 
 namespace SensorGasAPI.Negocio
 {
-    public class RegistroEmissaoProjecao : BaseProjecao
+    public class AvaliacaoPacienteProjecao : ProjecaoBase
     {
 
         #region Construtores
 
-        public RegistroEmissaoProjecao() { }
+        public AvaliacaoPacienteProjecao() { }
 
         #endregion
 

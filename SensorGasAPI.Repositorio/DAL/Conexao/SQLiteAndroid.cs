@@ -14,10 +14,10 @@ namespace SensorGasAPI.Repositorio
             // var caminhoBancoDados = ConfigurationManager.ConnectionStrings["conexaoSqlite"].ConnectionString;
 
             // Para debugar, descomentar abaixo
-            var caminhoBancoDados = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DBWebApi.db3");
+            //var caminhoBancoDados = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DBWebApi.db3");
             // Para publicar o site, descomentar abaixo
-            // var caminhoBancoDados = HttpContext.Current.Server.MapPath(@"~\DBWebApi.db3");
-            
+            var caminhoBancoDados = HttpContext.Current.Server.MapPath(@"~\DBWebApi.db3");
+
             return caminhoBancoDados;
         }
 
